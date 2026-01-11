@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aroma Coffee | Затишна кав'ярня</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com">
+<link href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+    :root {
+        --primary-color: #4e342e; /* Темно-коричневий */
+        --accent-color: #d7ccc8;  /* Світло-бежевий */
+        --text-color: #3e2723;
+        --bg-color: #fdfbf7;      /* Молочний фон */
+    }
+
+    body {
+        font-family: 'Lato', sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Стилізація шапки */
+    header {
+        background: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+        color: #fff;
+        padding: 80px 0;
+        text-align: center;
+        position: relative;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Затемнення фону картинки */
+    header::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    header .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    header h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+        color: #fff; 
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    header p {
+        font-size: 1.2rem;
+        font-style: italic;
+        color: #eee;
+    }
+
+    /* Стилізація блоків контенту */
+    .custom-card {
+        background: #fff;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(78, 52, 46, 0.1); /* М'яка тінь */
+        padding: 30px;
+        height: 100%;
+        transition: transform 0.3s ease;
+    }
+
+    .custom-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .custom-card h5 {
+        font-family: 'Playfair Display', serif;
+        color: var(--primary-color);
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        text-align: center;
+        position: relative;
+    }
+
+    /* Декоративна лінія під заголовком */
+    .custom-card h5::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 3px;
+        background: var(--primary-color);
+        margin: 10px auto 0;
+        border-radius: 2px;
+    }
+
+    /* Стилізація таблиці */
+    .table-custom {
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+    .table-custom thead {
+        background-color: var(--primary-color);
+        color: #fff;
+    }
+    .table-custom th, .table-custom td {
+        vertical-align: middle;
+        padding: 12px;
+    }
+    .table-custom tbody tr:nth-of-type(odd) {
+        background-color: rgba(215, 204, 200, 0.2);
+    }
+    .table-custom tbody tr:hover {
+        background-color: rgba(215, 204, 200, 0.5);
+    }
+
+    /* Відео та карта */
+    iframe {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Футер */
+    footer {
+        background: var(--primary-color);
+        color: var(--accent-color);
+        padding: 30px 0;
+        text-align: center;
+        margin-top: auto; /* Притискає футер до низу */
+        border-top: 5px solid #8d6e63;
+    }
+
+    footer a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+    footer a:hover {
+        color: #ffccbc;
+        text-decoration: underline;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <h1>Aroma Coffee</h1>
+        <p>Мистецтво смаку в кожній чашці</p>
+    </div>
+</header>
+
+<main class="container my-5">
+
+    <div class="row g-4 mb-5">
+        
+        <div class="col-md-7">
+            <div class="custom-card">
+                <h5>Наша філософія</h5>
+                <p class="lead text-center mb-4">Справжня кава — це більше, ніж напій.</p>
+                <p>
+                    Ми використовуємо лише 100% арабіку, обсмажену вручну нашими майстрами. Кожне зернятко проходить ретельний відбір, щоб ви могли насолодитися ідеальним балансом смаку та аромату.
+                </p>
+                <p>
+                    Aroma Coffee — це місце для натхнення, зустрічей з друзями та затишних вечорів. Завітайте до нас та відчуйте атмосферу справжнього європейського сервісу.
+                </p>
+                <div class="text-center mt-3">
+                    <button class="btn btn-outline-dark">Читати більше</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="custom-card">
+                <h5>Популярне меню</h5>
+                <table class="table table-custom text-center mb-0">
+                    <thead>
+                        <tr>
+                            <th>Напій</th>
+                            <th>Об'єм</th>
+                            <th>Ціна</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Еспресо</td>
+                            <td>30 мл</td>
+                            <td>45 грн</td>
+                        </tr>
+                        <tr>
+                            <td>Капучино</td>
+                            <td>250 мл</td>
+                            <td>65 грн</td>
+                        </tr>
+                        <tr>
+                            <td>Лате з карамеллю</td>
+                            <td>350 мл</td>
+                            <td>85 грн</td>
+                        </tr>
+                        <tr>
+                            <td>Фірмовий чай</td>
+                            <td>400 мл</td>
+                            <td>60 грн</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="custom-card p-4">
+                <h5>Атмосфера кав'ярні</h5>
+                <div class="ratio ratio-16x9 mt-3">
+                    <iframe src="https://www.youtube.com/embed/FaXk0ZkG7fU?si=rel=0" title="Coffee Video" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="custom-card p-4">
+                <h5>Завітайте до нас: пл. Ринок, Львів</h5>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.136586884323!2d24.02927231570918!3d49.83968397939566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add6c2e097565%3A0xac24b4594c3046f4!2z0L_Qu9C-0YnQsCDQoNC40L3QvtC6LCDQm9GM0LLRltCyLCDQm9GM0LLRltCy0YHRjNC60LAg0L7QsdC70LDRgdGC0YwsIDc5MDAw!5e0!3m2!1suk!2sua!4v1620000000000!5m2!1suk!2sua" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p class="mb-1">© 2024 Всі права захищено</p>
+        <small>Розробник: <a href="#" target="_blank">Андрій Заслуцький, Група ПП-21з</a></small>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
